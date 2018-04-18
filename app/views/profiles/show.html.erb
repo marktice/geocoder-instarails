@@ -1,0 +1,19 @@
+<% if @profile == nil %>
+  Empty Profile
+<% else %>  
+  <%= @profile.first_name %>
+  <%= @profile.last_name %>,
+  <%= @profile.street_address %>,
+  <%= @profile.city %>,
+  <%= @profile.postcode %>,
+  <%= @profile.state %>,
+  <%= @profile.country_code %>
+  <br>
+  <%= @profile.latitude %>,
+  <%= @profile.longitude %>
+<% end %>
+
+<br>
+<%= google_image_map(@profile, 15) %>
+<br>
+<%= link_to 'Edit', profile_edit_path %>

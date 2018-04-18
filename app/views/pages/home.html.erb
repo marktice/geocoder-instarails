@@ -1,0 +1,13 @@
+<h1>Instarails with GEOCODE!</h1>
+
+<% @profiles.each do |profile| %>
+  <p>
+    <%= profile.full_name %>
+  </p>
+  <p>
+    <%= profile.full_address %>
+  </p>
+  <p>
+    <%= google_image_map(profile) %>
+  </p>
+<% end %>
