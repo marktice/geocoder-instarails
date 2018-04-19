@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'pages/gmaps', to: 'pages#gmaps'
   get 'pages/directions', to: 'pages#directions'
   get 'pages/geolocation', to: 'pages#geolocation'
+  get 'pages/ruegen', to: 'pages#ruegen'  
 
 
   devise_for :users

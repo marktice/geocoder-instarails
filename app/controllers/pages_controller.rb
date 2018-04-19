@@ -12,7 +12,20 @@ class PagesController < ApplicationController
     @profile_last = Profile.last         
   end
 
-  def geolocation
-    
+  def geolocation    
+  end
+
+  def ruegen
+    @locations = []
+    User.all.each do |user|
+      unless user.profile.longitude.nil?
+      @locations.push({
+          lat: user.profile.latitude,
+          lng: user.profile.longitude,
+          name: user.profile.first_name
+        })
+      end
+    end
+    puts @locations
   end
 end

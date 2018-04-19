@@ -1,5 +1,8 @@
 <h1>Instarails with GEOCODE!</h1>
 
+<%= all_users_map(@profiles, zoom=14) %>
+
+
 <% @profiles.each do |profile| %>
   <p>
     <%= profile.full_name %>
