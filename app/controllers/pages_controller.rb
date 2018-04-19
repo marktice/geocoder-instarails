@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @profiles = Profile.all
+    @profiles = Profile.order("created_at DESC")
   end
 
   def gmaps  
@@ -10,5 +10,9 @@ class PagesController < ApplicationController
   def directions
     @profile_first = Profile.first
     @profile_last = Profile.last         
+  end
+
+  def geolocation
+    
   end
 end

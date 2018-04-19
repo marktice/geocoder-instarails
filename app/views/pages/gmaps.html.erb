@@ -10,7 +10,8 @@
     internal: {id: 'multi_markers'}},
     function(){
       var markers = handler.addMarkers([
-        { lat: 45, 
+        { 
+          lat: 45, 
           lng: 4, 
           picture: {
             url: "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
@@ -18,7 +19,10 @@
             height: 36
           }
         },
-        { lat: 47, lng: 3.5}
+        { 
+          lat: 47, 
+          lng: 3.5 
+        }
       ]);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
